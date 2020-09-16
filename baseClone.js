@@ -67,9 +67,10 @@ function deepClone(value){
 
     // 处理map对象
     if(tag === mapTag){
-        value.forEach((key, mapValue) => {
+        value.forEach((mapValue, key) => {
             result.set(key, deepClone(mapValue))
         })
+        return result
     }
 
     if(value){
@@ -102,3 +103,5 @@ const arr = [1,2]
 let a = [2, [1,3], {a: 2}, c, d, e, q, u]
 let b = deepClone(a)
 console.log(b)
+
+export default deepClone
