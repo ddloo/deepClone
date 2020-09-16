@@ -52,7 +52,7 @@ function deepClone(value){
     let tag = getTag(value)
     let result = isArr ? initCloneArray(value) : initCloneObj()
 
-    // 处理正则表达式对象和date对象
+    // 初始化特殊对象
     if(cloneTags[tag]){
         result = initCloneTag(value, tag)
     }
