@@ -88,7 +88,7 @@ function deepClone(value){
         return result
     }
 }
-// new RegExp(/[A-Z]/, 'ig')
+
 const c = /[A-Z]/ig
 const d = new Date()
 const q = new Set([1,2])
@@ -99,11 +99,6 @@ const u = new Map([
 const e = c.exec('AA')
 const arr = [1,2]
 
-// q.forEach((item, index) => console.log(item, index))
-// u.forEach((item, index) => console.log(item, index))
-console.log(Reflect.ownKeys(q), q)
 let a = [2, [1,3], {a: 2}, c, d, e, q, u]
 let b = deepClone(a)
 console.log(b)
-// console.log(typeof c, c, getTag(c), getTag(a), d, e, q, u)
-// console.log(new q.constructor)
